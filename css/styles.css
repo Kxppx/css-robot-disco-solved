@@ -5,37 +5,146 @@ body {
 /* 👇👇👇 Paste the styles of your Fancy Robot from the "Position it right" assignment here 👇👇👇 */
 
 .robot-container {
+  margin: auto;
+  width: 810px;
 }
 
 .robot-face-shape {
+  margin: auto;
+  position: relative;
+  top: 100px;
+  border: 10px solid red;
+  width: 600px;
+  height: 500px;
+  border-radius: 50px;
+  background-image: linear-gradient(black 30%, red);
 }
 
 .robot-eye-left {
+  border: 5px solid black;
+  height: 120px;
+  width: 140px;
+  position: absolute;
+  top: 90px;
+  left: 70px;
+  border-radius: 10px 70px 10px 30px;
+  background-image: linear-gradient(100deg, red, black 50%, red);
 }
 
 .robot-eye-right {
+  border: 5px solid black;
+  height: 120px;
+  width: 140px;
+  position: absolute;
+  top: 90px;
+  left: 380px;
+  border-radius: 70px 10px 30px 10px;
+  background-image: linear-gradient(80deg, red, black 50%, red);
 }
 
 .robot-ear-left {
+  background-image: url(https://picsum.photos/id/870/200/300?grayscale&blur=2);
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  border: 8px solid red;
+  height: 250px;
+  width: 100px;
+  position: relative;
+  bottom: 280px;
+  left: -30px;
 }
 
 .robot-ear-right {
+  background: rgba(0, 0, 0, 50%);
+  border: 0.3125em solid #ff0000;
+  height: 6.25em;
+  width: 6.25em;
+  position: relative;
+  bottom: 34em;
+  left: 45.375em;
 }
 
 .robot-nose {
+  width: 100px;  
+  aspect-ratio: 1;
+  background: linear-gradient(red, black 60%);
+  clip-path: polygon(50% 0,
+    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))));
+  position: relative;
+  top: 35%;  
+  left: 42%;
 }
 
-.robot-nose:before {
+/* .robot-nose:before {
 }
 
 .robot-nose:after {
-}
+} */
 
 .robot-teeth {
+  display: flex;
+  gap: 10px;
+  border: 30px solid black;
+  width: 400px;
+  height: 80px;
+  border-radius: 0 0 100px 100px;
+  position: relative;
+  top: 40%;
+  left: 15%;
 }
 
 .robot-tooth {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+  left: 27px;
 }
 
 .robot-hair-style {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 300px;
+  height: 120px;
+  position: absolute;
+  top: -20px;
+  left: 45%;
+  padding: 10px;
+}
+
+.robot-hair-one {
+  align-self: flex-end;
+  border: 2px solid red;
+  border-bottom: none;
+  border-radius: 60% 0;
+  background-image: linear-gradient(red, black 40%);
+  width: 40px;
+  height: 20px;
+}
+
+.robot-hair-two {
+  align-self: flex-end;
+  border: 2px solid red;
+  border-bottom: none;
+  border-radius: 90% 0 0;
+  background-image: linear-gradient(red, black 40%);
+  width: 40px;
+  height: 50px;
+}
+
+.robot-hair-three {
+  align-self: flex-end;
+  border: 2px solid red;
+  border-bottom: none;
+  border-radius: 0 90% 0 0;
+  background-image: linear-gradient(red, black 40%);
+  width: 40px;
+  height: 90px;
 }

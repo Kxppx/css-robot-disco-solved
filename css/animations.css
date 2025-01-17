@@ -1,0 +1,125 @@
+.robot-eye-left,
+.robot-eye-right {
+  animation: disappear 3s ease-in-out 1s infinite alternate;
+}
+
+.robot-nose,
+.robot-hair-one,
+.robot-hair-two,
+.robot-hair-three {
+  animation: color-change 3s  5s infinite;
+}
+
+.robot-teeth {
+  animation: boo 8s ease-in-out 1s infinite alternate;
+}
+
+.robot-tooth {
+  animation: teeth 1s ease-in-out 1s infinite;
+}
+
+.robot-ear-left:hover {
+  animation: fade 1s ease-in-out 1s infinite alternate;
+}
+
+.robot-ear-right {
+  animation: rotate 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes boo {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.6) translateX(-80px) translateY(100px);
+  }
+  50% {
+    transform: scale(0.5) translateX(-250px) translateY(100px);
+  }
+  75% {
+    transform: scale(1) translateX(50px) translateY(-60px);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background: linear-gradient(red, black 60%)
+  }
+  25% {
+    background: linear-gradient(red, black)
+  }
+  50% {
+    background: linear-gradient(black, red)
+  }
+  75% {
+    background: linear-gradient(red, black)
+  }
+  100% {
+    background: linear-gradient(red, black 60%)
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes teeth {
+  0% {
+    border-radius: 50%;
+    transform: scale(1) rotate(90deg);
+  }
+  25% {
+    border-radius: 25%;
+    transform: scale(1.5) rotate(180deg);
+  }
+  50% {
+    border-radius: 0;
+    transform: scale(0.5) rotate(240deg);
+  }
+  75% {
+    border-radius: 25%;
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+    border-radius: 50%;
+    transform: scale(1) rotate(90deg);
+  }
+}
